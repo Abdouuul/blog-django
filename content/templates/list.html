@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles List</title>
+  </head>
+  <body>
+    {% if user.is_authenticated %}
+    <h1>Bienvenu {{ user }}</h1>
+    {% endif %} {% for article in articles %}
+    <h1>
+      <a href="{% url 'article_details' article.id %}">{{article.title}}</a>
+    </h1>
+    <p>{{ article.content }}</p>
+    {% if article.author.first_name %}
+    <p>Author : {{ article.author.first_name }}</p>
+    {% else %}
+    <p>Author : Anonyme</p>
+    {% endif %}
+
+    <p>{{ article.created_at}}</p>
+    {% endfor %}
+  </body>
+</html>
