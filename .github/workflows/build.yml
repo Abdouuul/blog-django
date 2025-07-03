@@ -8,6 +8,8 @@ on:
 
 env: 
   IMAGE_NAME: blog-django-mns
+  TAR_NAME: blog-django-mns.tar
+
 jobs:
   test:
     runs-on: ubuntu-latest
