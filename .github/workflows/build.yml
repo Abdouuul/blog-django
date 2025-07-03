@@ -3,7 +3,7 @@ name: Build my blog app
 on:
   push:
     branches:
-      - master
+      - develop
     workflow_dispatch:
 
 jobs:
