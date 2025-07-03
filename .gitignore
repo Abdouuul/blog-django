@@ -24,7 +24,7 @@ media
 *.so
 
 # Docker
-Dockerfile
+
 
 # Distribution / packaging
 .Python
