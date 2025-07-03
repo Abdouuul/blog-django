@@ -37,4 +37,7 @@ jobs:
       - name: Build Docker App
         run: docker build -t $IMAGE_NAME:latest .
       
+      - name: Save Docker image
+        run: docker save $IMAGE_NAME:latest -o $TAR_NAME
+      
       
